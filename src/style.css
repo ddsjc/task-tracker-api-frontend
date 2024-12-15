@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Oswald:wght@200..700&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', serif;
+    font-weight: 700;
+    font-style:bold;
+}
+
+body{
+    background: #f9f9f9;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+header{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 2em;
+    color: #266DBD;
+    pointer-events: none;
+    margin-right: 550px;
+}
+
+.navigation a{
+    text-decoration: none;
+    color: #266DBD;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 30px;
+    margin: 0 10px;
+    font-weight: 700;
+}
+
+.projects-content{
+    margin-top: 40px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navigation-other a{
+    text-decoration: none;
+    color: #266DBD;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 30px;
+    margin: 0 10px;
+    font-weight: 700;
+}
+
+.navigation a:hover, 
+.navigation a.active{
+    background: #266DBD;
+    color: #fff;
+}
+
+.navigation button {
+    background: none; /* Убираем фон кнопки */
+    border: none; /* Убираем рамку */
+    color: #266DBD; /* Цвет текста */
+    padding: 6px 15px; /* Отступы */
+    border-radius: 20px; /* Скругленные края */
+    font-size: 30px; /* Размер шрифта */
+    font-weight: 700; /* Толщина шрифта */
+    cursor: pointer; /* Указатель мыши */
+    margin: 0 10px; /* Отступы между элементами */
+    text-align: center; /* Выравнивание текста */
+}
+
+.navigation button:hover,
+.navigation button:focus {
+    background: #266DBD; /* Цвет фона при наведении */
+    color: #fff; /* Цвет текста при наведении */
+    outline: none; /* Убираем стандартный фокус */
+}
+
+.parallax{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-bottom: 100px;
+}
+
+#text{
+    position: absolute;
+    font-size: 7em;
+    color: #266DBD;
+    text-shadow: 2px 2px 4px rgba(0,0,0), .2;
+}
+
+.parallax img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+}
+
+.sec{
+    position: relative;
+    background:#266DBD ;
+    padding: 100px;
+}
+
+.sec h2{
+    font-size: 4em;
+    color: #fff;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.sec p{
+    font-size: 2em;
+    color: #fff;
+    font-weight: 100;
+    text-align: justify;
+}
+
+.backdrop{
+    position: absolute;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modalWindow{
+    width: clamp(50%, 700px, 90%);
+    height: min(70%, 1300px);
+    margin: auto;
+    padding: 0 2rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+
+.modalWindow h2 {
+    font-size: 2.5em;
+    color: #266DBD;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Стиль для кнопки закрытия окна */
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 1.5em;
+    color: #266DBD;
+    cursor: pointer;
+}
+
+/* Стиль для всей формы */
+.registrationForm {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Стиль для меток в форме */
+.registrationForm label {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Стиль для полей ввода */
+.registrationForm input,
+.registrationForm select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+/* При фокусе на поле ввода */
+.registrationForm input:focus,
+.registrationForm select:focus {
+    border-color: #266DBD;
+    outline: none;
+}
+
+/* Стиль для кнопки отправки */
+.registrationForm button {
+    padding: 12px;
+    font-size: 1.2em;
+    background-color: #266DBD;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Эффект при наведении на кнопку */
+.registrationForm button:hover {
+    background-color: #1e58a8;
+}
+
+
+.projects-content {
+    padding: 20px;
+  }
+  
+  .project-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .project-item {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .project-item h3 {
+    margin: 0;
+  }
+  
+  .project-item p {
+    margin: 5px 0 0;
+  }
+  
+  .error {
+    color: red;
+    font-weight: bold;
+  }
