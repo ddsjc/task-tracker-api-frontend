@@ -27,6 +27,20 @@ header{
     z-index: 100;
 }
 
+.header-other {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 100;
+    background-color: #f9f9f9; /* Добавляем фон для читаемости */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень для выделения */
+}
+
 .logo{
     font-size: 2em;
     color: #266DBD;
@@ -224,40 +238,212 @@ header{
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
-/* Эффект при наведении на кнопку */
 .registrationForm button:hover {
     background-color: #1e58a8;
 }
 
+/* ВСЕ ЧТО СВЯЗАНО С ПРОЕКТАМИ*/
 
-.projects-content {
-    padding: 20px;
-  }
-  
-  .project-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .project-item {
-    margin-bottom: 20px;
+.projects-page {
+    padding-top: 200px; /* Отступ для компенсации высоты навбара */
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Пространство между проектами */
+    justify-content: center; /* Центрируем список */
+}
+
+.project-card {
+    width: 250px;
+    padding: 15px;
     border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Поднимаем карточку */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Увеличиваем тень */
+}
+
+.project-card:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Возвращаем стандартный вид */
+}
+
+.create-project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 10px;
+}
+
+.create-project input {
+    width: 300px;
     padding: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #f9f9f9;
+    font-size: 16px;
+}
+
+.create-project button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #266DBD;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.create-project button:hover {
+    background-color: #1e58a8;
+}
+
+/* ВСЕ ЧТО СВЯЗАНО С CОСТОЯНИЯМИ*/
+
+.project-page {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f6f9;
   }
   
-  .project-item h3 {
-    margin: 0;
+  /* Заголовок */
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
   }
   
-  .project-item p {
-    margin: 5px 0 0;
+  /* Контейнер для создания нового состояния */
+  .create-state {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
   }
   
-  .error {
-    color: red;
-    font-weight: bold;
+  .create-state input {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px;
+  }
+  
+  .create-state button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    font-size: 1rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .create-state button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Контейнер для всех состояний */
+  .states-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    overflow-x: auto;
+  }
+  
+  /* Колонка для каждого состояния */
+  .state-column {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+  }
+  
+  /* Заголовок состояния */
+  .state-column h2 {
+    font-size: 1.5rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Карточка задачи */
+  .task-card {
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .task-card:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Кнопка для открытия задачи */
+  .task-card button {
+    background-color: #2196f3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    float: right;
+  }
+  
+  .task-card button:hover {
+    background-color: #1976d2;
+  }
+  
+  /* Стили для Drag-and-Drop */
+  .ReactVirtualized__Grid__innerScrollContainer {
+    overflow: auto;
+  }
+  
+  .ReactVirtualized__Grid {
+    margin-bottom: 20px;
+  }
+  
+  /* Стили для перемещения карточек */
+  .droppable-column {
+    min-height: 200px;
+  }
+
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    text-align: center;
   }

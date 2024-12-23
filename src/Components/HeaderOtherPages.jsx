@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Modal from "./Modal/ModalWindow"; // Для регистрации
-import ModalAuth from "./Modal/ModalAuthWindow"; // Для авторизации
 import "../style.css";
 
 function HeaderOtherPages() {
@@ -13,9 +12,9 @@ function HeaderOtherPages() {
 
   return (
     <>
-      <header>
+      <header className="header-other">
         <h2 className="logo">Logo</h2>
-        <nav className="navigation-other">
+        <nav className="navigation">
           <button onClick={handleModalOpen}>Profile</button>
           <NavLink to="/home" className={({ isActive }) => (isActive ? "active" : "")}>
             Home

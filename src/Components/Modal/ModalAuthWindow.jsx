@@ -47,7 +47,7 @@ const ModalAuth = ({ handleClose }) => {
       localStorage.setItem('token', response.data.token);
       if (response.status === 200 || response.status === 201) {
         // Redirect to /home
-        window.location.href = "/project";
+        window.location.href = "/projects";
       }
     } catch (error) {
       console.error("Registration error:", error);
